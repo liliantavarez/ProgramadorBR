@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            background-color: brown;
+            overflow: hidden;
+            margin: auto;
+            width: 80%;
+            padding: 15px;
+            font-size: 18px;
+        }
+        .logo{
+            float: left;
+            color: white;
+        }
+        .menu{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            float: right;
+        }
+        li{
+            float: left;
+            color: white;
+            margin-left: 15px;
+        }
+        @media screen and (max-width: 500px){
+            /*criando css para tamanho de tela especifica, no caso, telas de um tamanho maximo de 400px(menores que 400px)*/
+
+            .logo{
+                float: none;
+                text-align: center;
+            }
+            .menu{
+                margin-top: 20px;
+                float: none;
+                text-align: center;
+            }
+            li{
+                float: none;
+                background-color: rgb(38, 0, 255);
+                margin-bottom: 5px;
+                padding: 10px;
+                
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            Logo
+        </div>
+
+        <ul class="menu">
+            <li>Home</li>
+            <li>Cursos</li>
+            <li>Contato</li>
+            <li>Localização</li>
+        </ul>
+    </div>
+</body>
+</html>

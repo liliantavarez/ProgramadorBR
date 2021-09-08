@@ -1,0 +1,76 @@
+/*usar # para mudar as ids*/
+#paragrafos{
+    background: url(https://www.significadofacil.com/wp-content/uploads/2019/07/background-1000x500.jpg) center/cover no-repeat;
+    color: antiquewhite;
+    }
+#titulo{
+    color: blue;
+}
+/*usar . para modificar classes*/
+.texto-verde{
+    color: green;
+}
+#cm{
+    background-color: blue;
+    width: 1cm;
+    height: 1cm;
+}
+#mm{
+    background-color: red;
+    width: 1mm;
+    height: 1mm;
+}
+#in{
+    background-color: blue;
+    width: 1in;
+    height: 1in;
+}
+#px{
+    background-color: red;
+    width: 10px;
+    height: 10px;
+}
+#pt{
+    background-color: blue;
+    width: 10pt;
+    height: 10pt;
+}
+#pc{
+    background-color: red;
+    width: 1pc;
+    height: 1pc;
+}
+/*
+.container{
+    font-size: 20px;
+}
+.inside{
+    font-size: 1em;
+}
+#base{
+    height: 10px;
+    background-color: red;
+}
+#container{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: 5px dashed black;
+
+}
+*/
+body{
+    padding: 0;
+    margin: 0;
+}
+.container{
+background-color: red;
+padding: 5px;
+border: 5px solid blue;
+margin: 10px;
+}
+.content{
+    border: 5px solid green;
+    background-color: #ddd;
+    padding: 5px;
+}
