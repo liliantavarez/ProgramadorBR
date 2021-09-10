@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Events </title>
+
+
+    <script>
+        
+        function h1click() {
+            console.log("Executando a funcao")
+        }
+
+        function change1(i) {
+            let h1 = document.getElementById("exemplo1")
+            //console.log(h1)
+            h1.innerText = i.value
+        }
+        function change2(i) {
+            let h1 = document.getElementById("exemplo2")
+            //console.log(h1)
+            h1.innerText = i.value
+        }
+        
+        function hideH1() {
+            let h1 = document.getElementsByTagName("h1")[0]
+            let div = document.getElementsByTagName("div")[0]
+            
+            if (h1.style.display == "none") {
+                h1.style.display = "block"
+                div.innerText = "Esconder"
+            }else{
+                div.innerText = "Mostrar"
+                h1.style.display = "none";
+            }
+        }
+    </script>
+
+    <style>
+        div {
+            padding: 10px;
+            font-size: 2rem;
+            background-color: cornflowerblue;
+            color: bisque;
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <h1>Sumir</h1>
+    <div onclick="hideH1()">Click para esconder</div>
+
+        <h1 onclick="this.style.color = 'red'">Clique em mim</h1>
+        
+        <h1 id="exemplo1" onclick="h1click()">Altera o valor pelo que foi digitado do input</h1>
+        <input type="text" onchange="change1(this)"> 
+        
+        <h1 id="exemplo2" onclick="h1click()">Altera valor pelo que esta sendo digitado no input</h1>
+        <input type="text" oninput="change2(this)">
+ 
+    
+
+</body>
+
+</html>
