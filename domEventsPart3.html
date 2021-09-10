@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Events III</title>
+
+    <script>
+        function loaded() {
+            let t = document.getElementById("titulo")
+            t.innerHTML = "Pagina Carregada"
+            t.onclick = mudarTexto;
+            t.addEventListener("mouseover", mudarCor)
+        }
+
+        function mudarCor() {
+            this.style.color = "red"
+            this.innerHTML = "Nova Cor"
+        }
+
+        function mudarTexto() {
+            this.innerHTML = "Novo Texto"
+            this.style.color = "black"
+        }
+    </script>
+
+</head>
+
+<body onload="loaded()">
+
+    <h1 id="titulo">teste</h1>
+
+
+</body>
+
+</html>
