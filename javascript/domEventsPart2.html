@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Events II</title>
+
+    <script>
+        function onOver(elemento) {
+            elemento.style.backgroundColor = "red"
+            elemento.style.color = "black"
+        }
+        function onOut(elemento) {
+            elemento.style.backgroundColor ="cornflowerblue"
+            elemento.style.color = "white"
+        }
+        function hideImg() {
+            let img = document.getElementsByTagName("img")[0]
+            if (img.style.display == "none") {
+                img.style.display = "inline"
+            }else{
+                img.style.display = "none"
+            }
+        }
+
+    </script>
+
+    <style>
+        img{
+            width: 200px;
+            margin-bottom: 25px;
+        }
+        div{
+            display: inline;
+            padding: 10px;
+            font-size: 2rem;
+            background-color: cornflowerblue;
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body onload="console.log('Pagina Completamente Carregada')">
+
+    <img src="https://i.pinimg.com/736x/3e/89/b2/3e89b2b6e903a116129d244e6dbc7658.jpg" alt="">
+    <br>
+    <div onclick="hideImg()" onmouseover="onOver(this)" onmouseout="onOut(this)">Click</div>
+</body>
+</html>
