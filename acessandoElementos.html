@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como acessar elementos pais ou filhos de um elemento</title>
+
+    <script>
+
+        window.onload = function (){
+            
+            let d1 = document.getElementById("d1")
+            console.log(d1)
+            for (const filhos of d1.children) {
+                console.log(filhos)
+            }
+
+            let d2 = document.getElementById("d2")
+            let p = d2.children[1]
+            console.log(p)
+            console.log(p.parentElement)
+            
+            let h1 = document.getElementsByTagName("h1")
+
+            for (const h of h1) {
+                console.log(h)
+                h.addEventListener("click",qop)
+            }
+            function qop(e){
+                let t = e.target;
+                console.log(t.parentElement)
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <div id="d1">
+        <h1>Titulo</h1>
+        <p>Paragrafo</p>
+    </div>
+
+    <div id="d2">
+        <h1>Titulo 2</h1>
+        <p>Paragrafo 2</p>
+    </div>
+    
+</body>
+</html>
