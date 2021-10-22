@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizadores</title>
+
+    <script>
+        var numero=0;
+
+        function atualizarTexto(){
+            let h1 = document.getElementsByTagName("h1")[0]
+            h1.innerHTML +=" "+numero
+            numero++
+        }
+
+        function mudarCor(){
+            let h1 = document.getElementsByTagName("h1")[0]
+            h1.style.color = "red"
+        }
+        function mudarTexto(){
+            let h1 = document.getElementsByTagName("h1")[0]
+            h1.innerHTML="Novo Texto"
+
+            //setTimeout(mudarCor,1000)
+            //setInterval(atualizarTexto,1000)
+        }
+    </script>
+</head>
+<body>
+    <h1>Titulo</h1>
+    <input onclick="mudarTexto()" type="submit"value="Mudar">
+    
+</body>
+</html>

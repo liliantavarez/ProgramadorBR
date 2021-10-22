@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizadores part2</title>
+
+    <script>
+        var numero=0;
+        var intervalo;
+
+        function atulizarTexto(){
+            let h1 = document.getElementsByTagName("h1")[0]
+            h1.innerHTML = numero
+            numero++
+        }
+
+        function iniciar(){
+            intervalo = setInterval(atulizarTexto,1000)
+
+        }
+        function parar(){
+            clearInterval(intervalo)
+        }
+        function reset(){
+            let h1 = document.getElementsByTagName("h1")[0]
+            h1.innerHTML = "Contador"
+            numero=0
+            parar()
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Contador</h1>
+    <input type="submit" value="iniciar" onclick="iniciar()">
+    <input type="submit" value="parar" onclick="parar()">
+    <input type="submit" value="reset" onclick="reset()">
+</body>
+</html>
