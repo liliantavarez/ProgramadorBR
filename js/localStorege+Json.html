@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage + JSON</title>
+
+    <script>
+        //let aluno = {nome:"marcia",nota:7.6}
+        //localStorage.setItem("alunos",JSON.stringify(aluno)) 
+
+       let aluno = localStorage.getItem("alunos")
+       console.log(JSON.parse(aluno)) //converte a string em objeto
+
+       localStorage.clear; //limpando a memoria
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
