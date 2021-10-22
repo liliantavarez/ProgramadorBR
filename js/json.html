@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //criando objeto
+        let aluno = {
+            nome: "Luan",
+            nota: 8.6
+        }
+        
+        //JSON = JavaScript Object Notation (Representação de um obejto)
+        let b = JSON.stringify(aluno) //Converte um objeto em uma String
+        
+        let aluno2 = '{"nome":"Rafaela","nota":7.5}'
+        
+        let b2 = JSON.parse(aluno2)//Converte a String em um Obejto 
+        
+        console.log(aluno)
+        console.log(b)
+        console.log(aluno2)
+        console.log(b2)
+
+        console.log(b2.nome)
+        console.log(aluno.nota)
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
