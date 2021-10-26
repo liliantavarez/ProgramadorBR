@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAG Video</title>
+
+    <style>
+        .container{
+            position: relative;
+            width: 640px;
+            height: 360px;
+        }
+        .video {
+            width: 100%;
+        }
+        
+        .controle {
+            
+            text-align: center;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn {
+            position:relative;
+            top: 100%;
+            background-color: rgba(240, 248, 255, 0.774);
+            width: 50px;
+            margin: 5px;
+            transform: translateY(-35px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <section onmouseover="exibir()" onmouseout="esconder()"  class="container" >
+                
+        <video id="amarelo" class="video" width="500" preload="auto" 
+            src="./assents/video/Emicida - AmarElo (Sample- Belchior - Sujeito de Sorte) part. Majur e Pabllo Vittar.mp4"
+            >
+        </video>
+        
+        <section class="controle" >
+            <img class="btn" onclick="play()" src="./assents/imagens/play.png" alt="">
+            <img class="btn" onclick="pause()" src="./assents/imagens/pause.png" alt="">
+            <img class="btn" onclick="stop()" src="./assents/imagens/stop.png" alt="">
+            <img class="btn" onclick="aumenta()" src="./assents/imagens/aumenta.png" alt="">
+            <img class="btn" onclick="diminui()" src="./assents/imagens/diminui.png" alt="">
+            <img class="btn" onclick="volta()" src="./assents/imagens/volta.png" alt="">
+            <img class="btn" onclick="avanca()" src="./assents/imagens/avanca.png" alt="">
+        </section>
+        
+        
+    </section>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
