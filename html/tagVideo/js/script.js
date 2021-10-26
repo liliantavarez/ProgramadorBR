@@ -4,6 +4,7 @@ let controle = document.getElementsByClassName("controle")[0];
 function play() {
   video.play();
 }
+
 function pause() {
   video.pause();
 }
@@ -28,10 +29,11 @@ function volta() {
 function avanca() {
   video.currentTime += 15;
 }
+
 function exibir() {
   controle.setAttribute("style", "display:block");
 }
+
 function esconder(){
   controle.setAttribute("style", "display:none");
-
 }
