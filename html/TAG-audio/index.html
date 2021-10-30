@@ -6,12 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAG audio</title>
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        
+        .container{
+            margin: auto;
+            background-color: aquamarine;
+            width: 300px;
+            text-align: center;
+            
+        }
+        .capas{
+            position: relative;
+            padding: 10px;
+            width: 250px;
+            height: 250px;
+        }
+        .icons{
+            width: 32px;
+            text-align: center;
+        }
+        .controle{
+            padding: 5px;
+        }
+        
+
+    </style>
 </head>
 <body>
 
     <section class="container">
-        <section class="musicas">
-            <audio src=""></audio>
+        <section class="musicas" >
+            <audio id="audio" >
+                <source src="./assets/musicas/Gloria Groove - A Tua Voz.mp3" type="audio/mpeg">
+                <source src="./assets/musicas/IZA - Meu talismã.mp3" type="audio/mpeg">
+                <source src="./assets/musicas/Lourena - Dizeres.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+        <section class="imagens">
+            <img class="capas" src="./assets/capas/gloria-atuavoz-capa.jpg" alt="">
+            <!--
+            <img class="capas" src="./assets/capas/iza-meutalismã-capa.jpg" alt="">
+            <img class="capas" src="./assets/capas/lourena-dizeres.jpg" alt="">
+            -->
+        </section>
+
+        <section class="controle">
+            <img class="icons" onclick="play()" src="./assets/icons/icons8-reproduzir.png" alt=""> 
+            <img class="icons" onclick="pause()" src="./assets/icons/icons8-pausa.png" alt=""> 
+            <img class="icons" onclick="stop()" src="./assets/icons/icons8-parar.png" alt="">
+            <img class="icons" onclick="diminui()" src="./assets/icons/icons8-volume-baixo.png" alt="">
+            <img class="icons" onclick="aumenta()" src="./assets/icons/icons8-volume-alto.png" alt="">
+            <img class="icons" src="./assets/icons/icons8-retroceder.png" alt="">
+            <img class="icons" src="./assets/icons/icons8-avanço.png" alt="">  
+            
         </section>
     </section>
     
