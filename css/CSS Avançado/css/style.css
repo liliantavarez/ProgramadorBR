@@ -1,0 +1,29 @@
+p::first-line{ 
+
+color: red;
+}
+
+p::first-letter{
+    font-size: 22px;
+}
+
+li{
+    list-style: none;
+}
+
+li::before{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(./estrela.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 5px;
+}
+
+p::selection{
+    background-color: brown;
+    color: aliceblue;
+}
