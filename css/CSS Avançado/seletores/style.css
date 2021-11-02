@@ -1,0 +1,59 @@
+/*Selecionar pela classe usandndo .nomeDaClasse */
+
+/*Selecionar pelo ID usando #nomeDoId  */
+
+
+/*Usando o asteriscos altera todos os elementos da pagina */
+* {
+    margin: 0;
+}
+
+/*Usando a tag, são alterados todos os elemtos da mesma TAG */
+p{
+    background-color: rgb(211, 156, 89);
+}
+
+/*selecionar mais de um elemento, usar nome dos elementos que deseja sepadores por virgula */
+h2, .p2 {
+    background-color: antiquewhite;
+}
+
+/*Seleciona TODOS os elementos <p> que estão dentro do elemento com ID #head */
+#head p {
+    color: brown;
+}
+
+/*Se usar o > seleciona todos os elementos que são FILHOS do primeiro elemento */
+#head > p {
+    color: blue;
+}
+
+/*Usando + seleciona o <p> que vem logo em seguida do #head*/
+#head + p {
+    color: blueviolet;
+}
+
+/*Usando + seleciona TODOS os elementos <p> que vem seguida do header*/
+header ~ p{
+font-size: 20px;
+}
+/*Selecionado pelo atributo */
+[width]{
+    background-color: chocolate;
+}
+
+[width="500"]{
+    font-style: italic;
+}
+
+[title~="titulo"]{
+    color: darkcyan;
+}
+
+[title^="t"]{
+    text-decoration: underline;
+}
+
+[title$="1"]{
+    text-decoration:overline;
+}
