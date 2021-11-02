@@ -1,0 +1,56 @@
+
+input:focus{
+    color: red;
+}
+
+li{
+    list-style: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+/*Seleciona o primerio filho do elemento acima, nesse caso o primeiro filho de <ul>*/
+li:first-child{
+    color: blue;
+}
+
+/*Seleciona o ultimo filho do elemento acima*/
+li:last-child{
+    color:red;
+}
+
+/*Seleciona o primerio elemento do tipo escolhido, no caso <li>*/
+li:first-of-type{
+    text-decoration: underline;
+}
+
+li:last-of-type{
+ text-decoration: underline;
+}
+
+li:nth-child(2){
+    color: brown;
+}
+
+li:nth-of-type(3){
+    color: green;
+}
+
+li:nth-last-child(2){
+    color:darkgoldenrod;
+}
+
+li:nth-of-type(3n-2){
+    font-style:oblique
+}
+
+li:nth-of-type(even){
+    background-color: darkkhaki;
+}
+
+li:nth-of-type(odd){
+    background-color: hotpink;
+}
