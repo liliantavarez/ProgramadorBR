@@ -3,16 +3,20 @@ body{
     margin: 0;
 }
 .container{
-    padding: 0;
     background-color: darkgrey;
     height: 400px;
     color: white;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    flex-wrap: wrap;
+     
 }
+
+/*WRAP é usado pra preservar o tamanho do elemento, quando não usado os elemento filhos são ajustados para caberem dentro do elemento pai*/
 
 .r1{
     background-color: red;
+    
 }
 
 .r2{
