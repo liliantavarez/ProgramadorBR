@@ -7,13 +7,12 @@ body{
     height: 400px;
     color: white;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: column wrap-reverse;
      
 }
 
 /*WRAP é usado pra preservar o tamanho do elemento, quando não usado os elemento filhos são ajustados para caberem dentro do elemento pai*/
-
+/*as propriedade flex-direction e flex-wrap podem ser definidas em uma so linha usando a propriedade flex-flow */
 .r1{
     background-color: red;
     
@@ -28,6 +27,6 @@ body{
 }
 
 .rect{
- width: 100PX;
- height: 100px;
+ width: 200PX;
+ height: 200px;
 }
