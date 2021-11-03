@@ -1,0 +1,29 @@
+/*display flex aplicado no elemento pai altera o comportamento dos elementos filhos; */
+body{
+    margin: 0;
+}
+.container{
+    padding: 0;
+    background-color: darkgrey;
+    height: 400px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.r1{
+    background-color: red;
+}
+
+.r2{
+    background-color: blue;
+}
+
+.r3{
+    background-color: green;
+}
+
+.rect{
+ width: 100PX;
+ height: 100px;
+}
