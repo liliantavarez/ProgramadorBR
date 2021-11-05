@@ -1,6 +1,7 @@
 /*Dentro do grid tudo são linhas e colunas*/
 
 .container{
+    height: 500px;
     border-radius: 5px;
     color: white;
     display: grid;
@@ -9,7 +10,15 @@
    /* grid-template-rows: 200px 100px;
       grid-template-columns: 1fr 2fr 1fr;
     */
-    grid-template: 200px 100px /1fr 2fr 1fr;
+    grid-template: auto auto /auto auto auto;
+    
+    grid-gap: 10px;
+    
+    justify-items:center;
+    align-items:center;
+
+    justify-content:space-evenly;
+    align-content: space-between;
 }
 
 .r1{
@@ -22,5 +31,8 @@
     background-color: green;
 }
 .rect{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
 
 }
