@@ -1,0 +1,26 @@
+/*Dentro do grid tudo são linhas e colunas*/
+
+.container{
+    border-radius: 5px;
+    color: white;
+    display: grid;
+    padding: 10px;
+    background-color:gray;
+   /* grid-template-rows: 200px 100px;
+      grid-template-columns: 1fr 2fr 1fr;
+    */
+    grid-template: 200px 100px /1fr 2fr 1fr;
+}
+
+.r1{
+    background-color: red;
+}
+.r2{
+    background-color: blue;
+}
+.r3{
+    background-color: green;
+}
+.rect{
+
+}
