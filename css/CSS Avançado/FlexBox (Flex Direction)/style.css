@@ -7,7 +7,6 @@ body{
     height: 400px;
     color: white;
     display: flex;
-    flex-flow: column wrap-reverse;
      
 }
 
@@ -19,10 +18,12 @@ body{
 }
 
 .r2{
+    flex-grow: 2;
     background-color: blue;
 }
 
 .r3{
+    flex-shrink:  0;
     background-color: green;
 }
 
