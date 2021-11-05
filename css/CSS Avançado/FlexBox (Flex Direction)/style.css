@@ -13,11 +13,13 @@ body{
 /*WRAP é usado pra preservar o tamanho do elemento, quando não usado os elemento filhos são ajustados para caberem dentro do elemento pai*/
 /*as propriedade flex-direction e flex-wrap podem ser definidas em uma so linha usando a propriedade flex-flow */
 .r1{
+    order: 1;
     background-color: red;
     
 }
 
 .r2{
+    order: -1;
     flex-grow: 2;
     background-color: blue;
 }
