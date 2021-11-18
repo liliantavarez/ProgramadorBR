@@ -12,6 +12,7 @@
     height: 200px;
     border-style: solid;
     animation-name: changeColor;
-    animation-duration: 5s;    
+    animation-duration: 6s;  
+    animation-delay: -1s;  
 }
 
