@@ -1,3 +1,35 @@
+
+@keyframes move {
+    0%{left: 0px;}
+    100%{left: 300px;}
+    
+}
+.box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    animation-name: move;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation:changeColor 3s linear 0s 1 normal forwards;
+}
+.div1{
+    animation-timing-function: linear;
+}
+.div2{
+    animation-timing-function: ease;
+}
+.div3{
+    animation-timing-function: ease-in;
+}
+.div4{
+    animation-timing-function: ease-out;
+}
+.div5{
+    animation-timing-function: ease-in-out;
+}
+
 @keyframes changeColor {
 
     0% {background-color: red; width: 200px;}
@@ -7,14 +39,15 @@
 
 }
 
-.box{
+/* .box{
     width: 200px;
     height: 200px;
     border-style: solid;
     animation-name: changeColor;
     animation-duration: 4s;
     animation-direction:alternate;
-    animation-iteration-count:3;
-    /* animation-delay: -1s;   */
-}
+    animation-fill-mode: both;
+    animation-iteration-count:4;
+    animation-delay: -1s;  
+} */
 
