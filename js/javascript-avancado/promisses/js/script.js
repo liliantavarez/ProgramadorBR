@@ -1,8 +1,9 @@
-//Passando função como argumento de uma função
-
+/*
+Promise: Um objeto que recebe como argumento uma função()
+*/
 let usuarios = ["Luan", "Carlos", "Luana", "Maria"];
 
-function inserirUsuario(nome) {
+let  inserirUsuario = (nome) => {
   let promise = new Promise(function (resolve, reject) {
     setTimeout(() => {
       usuarios.push(nome);
@@ -11,19 +12,18 @@ function inserirUsuario(nome) {
       if (!error) {
         resolve();
       } else {
-        reject({ msg: "Erro" });
+        reject({ msg: "Erro de execução" });
       }
     }, 1000);
   });
   return promise;
 }
-
-function listarUsuarios() {
+let listarUsuarios = () => {
   console.log(usuarios);
 }
 
 inserirUsuario("Carmem")
-  .then(listarUsuarios)
-  .catch((error) => {
+  .then(listarUsuarios)//só executa quando der resolve(quando a função for executada)
+  .catch((error) => { //função que exibe o erro caso aconteca 
     console.log(error.msg);
   });
