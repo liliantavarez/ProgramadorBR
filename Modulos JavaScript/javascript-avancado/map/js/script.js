@@ -1,20 +1,23 @@
-function speakGeneric() {
-  console.log(this.sound);
+/*
+MAP: Cria um novo array em cima dos elementos do array principal
+*/
+
+function novoAluno(nome, idade) {
+  return { nome, idade };
 }
 
-let dog = {
-  sound: "Au Au",
-  speak: speakGeneric,
-};
+let alunos = [
+  novoAluno("Mario", 23),
+  novoAluno("Jose", 45),
+  novoAluno("Marcia", 29),
+  novoAluno("João", 35),
+];
 
-let cat = {
-  sound: "Miau",
-  speak: speakGeneric,
-};
+// function nomeIdade(aluno){
+//   return `${aluno.nome} tem: ${aluno.idade}`
+// }
 
-dog.speak();
-cat.speak();
+// console.log(alunos.map(nomeIdade))
 
-let bindedFunction = speakGeneric.bind(dog);
+console.log(alunos.map((aluno) => `${aluno.nome} tem: ${aluno.idade}`));
 
-bindedFunction();
