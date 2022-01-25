@@ -1,6 +1,6 @@
 /*
 async await:
-Utilizando aync no lugar de promise 
+uma outra maneira de utilizar uma promise 
 */
 let usuarios = ["Luan", "Carlos", "Luana", "Maria"];
 
@@ -23,7 +23,7 @@ let listarUsuarios = () => {
   console.log(usuarios);
 };
 
-async function executar() {
+async function executar() { //criando uma função do tipo async
   await inserirUsuario("Marcela"); //await: faz com que o programa fique esperando ate que a promise seja executada
   listarUsuarios(); //executa somente depois do await
 }
