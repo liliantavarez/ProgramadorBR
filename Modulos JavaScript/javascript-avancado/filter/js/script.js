@@ -1,6 +1,6 @@
 /*
 Filter: função do array que permite filtrar elementos de um array
-Utliza o callback para chegar um array e retornar os elementos que atendem determinada condição
+Utliza o callback para checar  um array e retornar os elementos que atendem determinada condição
 */
 
 function novoAluno(nome, idade) {
@@ -16,10 +16,18 @@ let alunos = [
 
 console.log(alunos);
 
-let alunosComMenosDe30 = alunos.filter((aluno) => aluno.idade < 30);
+let alunosComMenosDe30 = alunos.filter((aluno) => aluno.idade < 30); //retorna um novo array com os elementos que atendem a condição definida
 console.log(alunosComMenosDe30);
 
+for (const aluno of alunosComMenosDe30) {
+  console.log(aluno.nome)
+}
+
 //fazendo a função filter 
+function temMaisDe30(aluno){
+  return aluno.idade > 30
+}
+
 function filtro(callback){
   let alunosFiltrados = []
   for (let aluno of alunos){
@@ -29,3 +37,6 @@ function filtro(callback){
   }
   return alunosFiltrados
 }
+
+console.log(filtro(temMaisDe30))
+
