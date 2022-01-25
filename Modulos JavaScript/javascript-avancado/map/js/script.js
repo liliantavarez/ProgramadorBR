@@ -1,5 +1,5 @@
 /*
-MAP: Cria um novo array em cima dos elementos do array principal
+MAP: Cria um novo array criado em cima dos elementos do array principal
 */
 
 function novoAluno(nome, idade) {
@@ -13,11 +13,12 @@ let alunos = [
   novoAluno("João", 35),
 ];
 
-// function nomeIdade(aluno){
-//   return `${aluno.nome} tem: ${aluno.idade}`
-// }
-
-// console.log(alunos.map(nomeIdade))
 
 console.log(alunos.map((aluno) => `${aluno.nome} tem: ${aluno.idade}`));
 
+
+function nomeIdade(aluno){//criando uma funçao que concaneta o nome e a idade do aluno
+  return `${aluno.nome} tem: ${aluno.idade} anos`
+}
+
+console.log(alunos.map(nomeIdade))
