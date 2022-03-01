@@ -118,17 +118,17 @@ let db = firebase.firestore();
 
 //Incrementar valor de uma coleção
 
-db.collection(TURMA)
-  .doc("jnXbfZoC1KIHl4XczO6W")
-  .update({
-    faltas: firebase.firestore.FieldValue.increment(2),
-  })
-  .then(() => {
-    console.log("Numero de faltas atualizado com sucesso");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// db.collection(TURMA)
+//   .doc("jnXbfZoC1KIHl4XczO6W")
+//   .update({
+//     faltas: firebase.firestore.FieldValue.increment(2),
+//   })
+//   .then(() => {
+//     console.log("Numero de faltas atualizado com sucesso");
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 
 //Ler todos os dados de uma coleção
 
@@ -137,7 +137,7 @@ db.collection(TURMA)
 //   .then((snapshot) => {
 //     snapshot.forEach((doc) => {
 //       let aluno = doc.data();
-//       console.log(aluno.nome);
+//       console.log(aluno);
 //     });
 //   });
 
@@ -160,3 +160,30 @@ db.collection(TURMA)
 //       console.log(doc.data());
 //     });
 //   });
+
+//onSnapshot: Executa sempre que houver alguma modificação no documento
+
+// db.collection("turmaA").onSnapshot((snapshot) => {
+//   snapshot.forEach((doc) => {
+//     let aluno = doc.data();
+//     console.log(aluno);
+//   });
+// });
+
+//Acompanhar alteraçoes em um documento especifico atraves do seu ID
+
+// let docRef = db.collection(TURMA).doc('5o6jBw8THru2J8XVpOWK')
+// docRef.onSnapshot((doc) =>{
+//     console.log("Documento alterado:",doc.data())
+// })
+
+//Usando onSnapshot junto do where para buscas
+
+db.collection(TURMA)
+  .where("notas.nota1", ">", 7)
+  .onSnapshot((snapshot) => {
+    snapshot.forEach((doc) => {
+      let aluno = doc.data();
+      console.log(aluno.nome);
+    });
+  });
