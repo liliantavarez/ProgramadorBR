@@ -179,11 +179,33 @@ let db = firebase.firestore();
 
 //Usando onSnapshot junto do where para buscas
 
+// db.collection(TURMA)
+//   .where("notas.nota1", ">", 7)
+//   .onSnapshot((snapshot) => {
+//     snapshot.forEach((doc) => {
+//       let aluno = doc.data();
+//       console.log(aluno.nome);
+//     });
+//   });
+
+//Apagando campo de um documento
+
 db.collection(TURMA)
-  .where("notas.nota1", ">", 7)
-  .onSnapshot((snapshot) => {
-    snapshot.forEach((doc) => {
-      let aluno = doc.data();
-      console.log(aluno.nome);
-    });
+  .doc("jnXbfZoC1KIHl4XczO6W")
+  .update({
+    estadosVisitados: firebase.firestore.FieldValue.delete(),
+  })
+  .then(() => {
+    console.log("Campo apagado do documento");
+  })
+  .catch((err) => {
+      console.log(err)
   });
+
+//Apagar documento interio
+
+db.collection(TURMA).doc('AlunoNovo').delete().then(()=>{
+    console.log("Documento deletado do sistema!")
+}).catch((err)=>{
+    console.log(err)
+})
