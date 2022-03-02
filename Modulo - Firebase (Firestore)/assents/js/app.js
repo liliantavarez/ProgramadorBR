@@ -190,22 +190,22 @@ let db = firebase.firestore();
 
 //Apagando campo de um documento
 
-db.collection(TURMA)
-  .doc("jnXbfZoC1KIHl4XczO6W")
-  .update({
-    estadosVisitados: firebase.firestore.FieldValue.delete(),
-  })
-  .then(() => {
-    console.log("Campo apagado do documento");
-  })
-  .catch((err) => {
-      console.log(err)
-  });
+// db.collection(TURMA)
+//   .doc("jnXbfZoC1KIHl4XczO6W")
+//   .update({
+//     estadosVisitados: firebase.firestore.FieldValue.delete(),
+//   })
+//   .then(() => {
+//     console.log("Campo apagado do documento");
+//   })
+//   .catch((err) => {
+//       console.log(err)
+//   });
 
 //Apagar documento interio
 
-db.collection(TURMA).doc('AlunoNovo').delete().then(()=>{
-    console.log("Documento deletado do sistema!")
-}).catch((err)=>{
-    console.log(err)
-})
+// db.collection(TURMA).doc('AlunoNovo').delete().then(()=>{
+//     console.log("Documento deletado do sistema!")
+// }).catch((err)=>{
+//     console.log(err)
+// })
