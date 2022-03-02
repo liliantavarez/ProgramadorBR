@@ -31,13 +31,23 @@ function login() {
   let userEmail = "novoteste@teste.com";
   let userSenha = "123abc";
 
-  auth.signInWithEmailAndPassword(userEmail, userSenha)
-      .then((loggedUser) => {
-        console.log(auth.currentUser);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  //setPersitence: Metado utilizado para alterar o estado de persistencia
+  //SESSION: So funciona para aba/janela que o login for feito
+  //LOCAL: Padrão, persiste em qualquer janela 
+  //NONE: o login é desfeito sempre que a janela for atualizada
+
+  auth.setPersistence(firebase.auth.Auth.Persistence.NONE).then(()=>{
+    auth.signInWithEmailAndPassword(userEmail, userSenha)
+        .then((loggedUser) => {
+          console.log(auth.currentUser);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+  }).catch((error)=>{
+    console.log(error)
+  })
+
 }
 
 function logout() {
