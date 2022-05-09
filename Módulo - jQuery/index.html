@@ -24,6 +24,23 @@
         }, 2000)
 
         //Sem uso do ajax
+        $(".titulo").click(()=>{
+            console.log("click")
+        })
+
+        $(".titulo").mouseenter(() =>{
+            console.log("Mouse Enter")
+        })
+
+        $(".titulo").mouseleave(()=>{
+            console.log("Mouse Leave")
+        })
+
+        $(".titulo").dblclick(()=>{
+            console.log("Double Clicl")
+        })
+
+
 
         document.querySelectorAll(".titulo").forEach(elemento => {
             elemento.style.display = "none"
