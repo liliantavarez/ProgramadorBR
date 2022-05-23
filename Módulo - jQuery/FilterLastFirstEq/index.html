@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter, Last, First e Eq</title>
+</head>
+
+<style>
+    .div2 {
+        background-color: gray;
+        color: white;
+    }
+</style>
+
+<body>
+    <div id="container1">
+        <div class="div1" id="div1">Div 1</div>
+        <div class="div2" id="div2">Div 2</div>
+        <div class="div1" id="div3">Div 3</div>
+        <div class="div2" id="div4">Div 4</div>
+        <div class="div1" id="div5">Div 5</div>
+    </div>
+
+    <div id="container2">
+        <div class="div2" id="div6">Div 6</div>
+        <div class="div1" id="div7">Div 7</div>
+        <div class="div2" id="div8">Div 8</div>
+        <div class="div1" id="div9">Div 9</div>
+        <div class="div2" id="div10">Div 10</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        let selected = $("div");
+        console.log(selected.filter(".div2"));
+        console.log(selected.filter("#div5"));
+
+        selected = $("#container2").children().filter(".div2")
+        console.log(selected)
+
+        //primeiro filho
+        console.log($("#container2").children().first())
+
+        //ultimo filho
+        console.log($("#container2").children().last())
+
+        //todos os filhos exceto o passado no parametro da funcao not() 
+        console.log($("#container2").children().not("#div8"))
+        console.log($("#container2").children().not(".div2"))
+
+        //selecionando atravez do indice
+        console.log($("#container2").children().eq(3))
+        
+    </script>
+
+</body>
+
+</html>
