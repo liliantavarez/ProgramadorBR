@@ -1,0 +1,1 @@
+Um texto qualquer
