@@ -24,6 +24,18 @@ app.get("/", (req, res) => {
   res.send("<h1>Hello World From GET</h1>");
 });
 
+app.post("/", (req,res)=>{
+    res.send("<h1>Hello World From POST</h1>")
+})
+
+app.put("/", (req,res)=>{
+    res.send("<h1>Hello World From PUT</h1>")
+})
+
+app.delete("/", (req,res)=>{
+    res.send("<h1>Hello World From DELETE</h1>")
+})
+
 //Definindo com qual porta o express ira trabalhar
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta: ${PORT}`);

@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Express</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <h1>Hello World</h1>
-</body>
+
+    <script>
+
+      fetch("http://localhost:5000/", {
+        method: "POST",
+      })
+        .then((res) => {
+          return res.text();
+        })
+        .then((html) => {
+          console.log(html);
+        });
+
+      fetch("http://localhost:5000/", {
+        method: "PUT",
+      })
+        .then((res) => {
+          return res.text();
+        })
+        .then((html) => {
+          console.log(html);
+        });
+
+      fetch("http://localhost:5000/", {
+        method: "DELETE",
+      })
+        .then((res) => {
+          return res.text();
+        })
+        .then((html) => {
+          console.log(html);
+        });
+        
+    </script>
+  </body>
 </html>
