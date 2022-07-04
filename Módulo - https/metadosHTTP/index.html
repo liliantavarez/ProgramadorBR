@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste</title>
+  </head>
+  <body>
+      <!-- Ler Dados -->
+      <button onclick="get()">Get</button>
+      <!-- Mandar dados para serem gravados -->
+      <button onclick="post()">Post</button>
+      <!-- Mandar dados para serem atualizados -->
+      <button onclick="put()">Put</button>
+      <!-- Deletar dados -->
+    <button onclick="del()">Delete</button>
+
+    <script>
+      const url = "http://localhost:3000/teste";
+
+      function get() {
+        fetch(url, {
+          method: "get",
+        })
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      function post() {
+        fetch(url, {
+          method: "post",
+        })
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      function put() {
+        fetch(url, {
+          method: "put",
+        })
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      function del() {
+        fetch(url, {
+          method: "delete",
+        })
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+    </script>
+  </body>
+</html>
