@@ -7,7 +7,7 @@
     <title>Usuario</title>
 </head>
 <body>
-    <%- include('./partials/navbar')%>
+    <%- include('partials/navbar', {title: "Usuários"});%>
     
     <% for (let user of users) {%>
         <% if (user.id % 2 == 0) {%>
