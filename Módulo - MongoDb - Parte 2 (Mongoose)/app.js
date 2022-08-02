@@ -3,19 +3,6 @@ const app = express();
 const port = 3000;
 const mongoose = require("mongoose");
 
-/* Conexão com o banco de dados */
-mongoose.connect("mongodb://localhost/links");
-
-let db = mongoose.connection;
-
-db.on("error", () => {
-  console.log("Houve um erro!");
-});
-
-db.once("open", () => {
-  console.log("Banco Carregado..");
-});
-
 app.get("/", (req, res) => res.send("Hello Word"));
 
 app.listen(port, () => {
@@ -33,16 +20,43 @@ const linkSchema = new mongoose.Schema({
 /* Criando modelo baseado no schema */
 const Link = mongoose.model("Link", linkSchema);
 
-/* Criando novo documento que sera inserido na coleção */ 
+/* 
+Criando novo documento que sera inserido na coleção 
 let link = new Link({
   title: "Twitter",
   description: "Link para o twitter",
   url: "https://twitter.com/liliantavarez",
 });
+*/
 
-/* Salvando no DB */
+/* Salvando no DB 
 link.save().then((doc) => {
     console.log("Documento inserido com sucesso!", doc);
   }).catch((err) => {
     console.log("Erro ao inserir documento na coleção!", err);
   });
+*/
+
+/* Conexão com o banco de dados */
+mongoose.connect("mongodb://localhost/links");
+
+let db = mongoose.connection;
+
+db.on("error", () => {
+  console.log("Houve um erro!");
+});
+
+db.once("open", () => {
+  console.log("Banco Carregado..");
+});
+
+/* realizando busca no banco de dados */
+app.get("/:title", async (req, res) => {
+  let title = req.params.title;
+  try {
+    let doc = await Link.findOne({ title });
+    res.redirect(doc.url);
+  } catch (err) {
+    res.send("Houve um erro");
+  }
+});
