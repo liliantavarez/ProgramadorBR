@@ -1,0 +1,35 @@
+<!-- 
+
+    Comandos MongoDB
+
+    show dbs: mostra todos os bancos criados
+    db: qual banco voce esta setado
+    db.createCollection('nomeDaColecao'): cria uma nova coleção no bd
+    db.dropDatabase(): apaga o bd que voce esta usando
+    use nomeDoBanco: escolhe o bd que voce quer usar
+    db.nomeDaColecao.drop(): apaga uma coleção especifica
+    show collections: mostrar todas as coleçoes de um bd
+
+    db.nomeDaColecao.insertOne({nome:"João",senha:"123654",email:"joao@email.com"}): insere um documento na colecao
+    db.nomeDaColecao.insertMany([{nome:"Carla",senha:"123654",email:"carla@email.com"},{nome:"camila",senha:"123654",email:"camila@email.com"},{nome:"mario",senha:"123654",email:"mario@email.com"}]): insere varios documento na colecao
+
+    db.nomeDaColecao.find(): retorna todos os documentos da coleção
+    db.nomeDaColecao.findOne(): retorna o priemiro documento da coleção
+    db.nomeDaColecao.find().limit(2): limita a quantidade de elementos que ira retornar na busca
+    db.nomeDaColecao.find().pretty(): formata a saida dos dados
+
+    db.nomeDaColecao.find({type:admin}): busca por documentos que a tenta ao requisito que foi passado
+    db.nomeDaColecao.find({type:admin}).count(): retorna a quantidade de elementos 
+    db.nomeDaColecao.find().sort({name:1}): retorna os elementos em ordem alfabetica 
+    db.nomeDaColecao.find().sort({name:-1}): retorna os elementos em ordem alfabetica invertida 
+   
+    db.nomeDaColecao.updateOne({nome:"Carla"},{$set:{tel:"12345678"}}): update de um elemento especifico
+    db.nomeDaColecao.updateMany({},{$set:{turma:"101"}}): update em todos os documentos de uma coleçao
+    db.nomeDaColecao.updateMany({},{$unset:{turma:"101"}}): remover campo de todos os elementos
+    db.nomeDaColecao.updateMany({},{$set:{visitas:"0"}}): insere um novo campo em todos os documentos
+    db.nomeDaColecao.updateMany({},{$rename:{visitas:"views"}}): renomeia campo de todos os documentos
+    db.nomeDaColecao.updateOne({nome:"Carla"},{$inc:{views:1}}): incrementa valor no bd 
+    db.nomeDaColecao.updateOne({nome:"Carla"},{$inc:{views:5}}): incrementa valor no bd 
+    
+
+-->
