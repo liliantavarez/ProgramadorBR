@@ -30,6 +30,26 @@
     db.nomeDaColecao.updateMany({},{$rename:{visitas:"views"}}): renomeia campo de todos os documentos
     db.nomeDaColecao.updateOne({nome:"Carla"},{$inc:{views:1}}): incrementa valor no bd 
     db.nomeDaColecao.updateOne({nome:"Carla"},{$inc:{views:5}}): incrementa valor no bd 
-    
 
 -->
+
+<!-- 
+    Fazendo conexão do node com DB
+
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost/links");
+
+-- Acessando BD com mongosse via callback
+mongoose.connect("mongodb://localhost/links", (err, db) => {
+   console.log(err);
+   console.log(db);
+});
+
+-- Acessando BD com mongosse via promisse
+ mongoose.connect("mongodb://localhost/links").then(db => {
+     console.log(db);
+}).catch(err =>{
+     console.log(err);
+})
+
+ -->
