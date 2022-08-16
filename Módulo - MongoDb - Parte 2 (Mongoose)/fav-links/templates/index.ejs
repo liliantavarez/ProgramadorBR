@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novo Link</title>
+</head>
+
+<style>
+  * {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  #addLink,
+  .btns {
+    display: flex;
+  }
+
+  #addLink {
+    margin: auto;
+    width: 300px;
+    flex-direction: column;
+  }
+
+  .btns {
+    margin-top: 15px;
+    justify-content: space-between;
+  }
+
+
+  .buttonClass {
+    cursor: pointer;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-width: 2px;
+    color: #777777;
+    border-color: #dcdcdc;
+    font-weight: bold;
+    border-radius: 4px;
+    border-style: solid;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(#ededed, #dfdfdf);
+  }
+
+  .buttonClass:hover {
+    background: linear-gradient(#dfdfdf, #ededed);
+  }
+
+  #linkVoltar {
+    text-decoration: none;
+  }
+
+  .field {
+    margin: 5px 0;
+  }
+  #page-name{
+    text-align: center;
+  }
+</style>
+
+<body>
+  <h1 id="page-name">Adicionar Link</h1>
+  <form id="addLink" action="/" method="post">
+    <input type="text" name="title" placeholder="Title" class="field" value="<%=body.title%>" required />
+    <input type="text" name="description" placeholder="Description" class="field" value="<%=body.description%>" />
+    <input type="text" name="url" placeholder="URL" class="field" value="<%=body.url%>" required />
+    <section class="btns">
+      <button class="buttonClass">Salvar</button>
+      <a href="/" class="buttonClass" id="linkVoltar">Voltar</a>
+    </section>
+  </form>
+  <%if(erro){%>
+  <h3>
+    <%=erro.message%>
+  </h3>
+  <%}%>
+</body>
+
+</html>
