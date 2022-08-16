@@ -1,11 +1,12 @@
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 const userController = {
 	register: async function (req, res) {
 		const selectedUser = await User.findOne({email: req.body.email});
 
-		if (selectedUser) return res.status(400).send("Email já cadastrado");
+		if (selectedUser) return res.status(400).send("Email ou senha incorreto");
 
 		const user = new User({
 			name: req.body.name,
@@ -20,9 +21,17 @@ const userController = {
 			res.status(400).send(error);
 		}
 	},
-	login: function (req, res) {
-		console.log("Login");
-		res.send("login");
+	login: async function (req, res) {
+        const selectedUser = await User.findOne({email: req.body.email});
+		if (!selectedUser) return res.status(400).send("Email ou senha incorreto");
+        
+        const passwordAndUserMatch = bcrypt.compareSync(req.body.password, selectedUser.password)
+		if (!passwordAndUserMatch) return res.status(400).send("Email ou senha incorreto");
+        
+        const token = jwt.sign({_id: selectedUser._id}, process.env.TOKEN_SECRET)
+        
+        res.header('authoriztion-token',token)
+        res.send("user logged")
 	},
 };
 
