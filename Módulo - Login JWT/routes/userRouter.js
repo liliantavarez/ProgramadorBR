@@ -11,7 +11,6 @@ mongoose.connect(process.env.MONGOOSE_URL_CONNECTION, (error)=>{
     }
 })
 
-
 router.post("/register", userController.register);
 
 router.post("/login", userController.login);
